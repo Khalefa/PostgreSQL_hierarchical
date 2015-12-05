@@ -1,0 +1,12 @@
+sudo apt-get install bison flex libreadline-dev git-core gfortran build-essential
+wget http://www.zlib.net/zlib-1.2.8.tar.gz
+tar -xzvf zlib-1.2.8.tar.gz
+cd nlopt
+./configure
+make
+make install
+cd ..
+mkdir ../pgsql
+./configure --prefix=../pgsql
+make
+make install
